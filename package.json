@@ -5,14 +5,16 @@
   "private": true,
   "scripts": {
     "tsc": "tsc",
-    "run": "npx ts-node src/newFile.ts"
+    "run": "npx ts-node src/run.ts"
   },
   "devDependencies": {
     "@types/node": "^16.10.2",
     "typescript": "^4.4.3"
   },
   "dependencies": {
-    "tslint": "^6.1.3",
-    "ts-node": "^10.2.1"
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
+    "ts-node": "^10.2.1",
+    "tslint": "^6.1.3"
   }
 }
