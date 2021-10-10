@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "tsc": "tsc",
-    "run": "npx ts-node src/newFile.ts"
+    "run": "npx ts-node src/test.ts"
   },
   "devDependencies": {
     "@types/node": "^16.10.2",
