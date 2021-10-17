@@ -1,0 +1,2 @@
+1.Generator reread.
+2.Promises and Meta-Programming.
