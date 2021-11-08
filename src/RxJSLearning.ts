@@ -1,7 +1,7 @@
 /**
  * @author Hovhannes Mirzoyan
  */
-import {filter, map, Observable, of, tap, from, combineLatestWith, switchMap} from "rxjs";
+import {filter, map, Observable, of, tap} from "rxjs";
 
 let a = 87;
 
@@ -16,37 +16,11 @@ const foo = new Observable<number>(subscriber => {
 
 });
 
-
 const filteredObservable = foo.pipe(filter(ev => {
     return ev % 5 === 0;
 }));
 
-
 filteredObservable.subscribe(console.log);
-
-//filteredObservable.subscribe(console.log);
-
-
-const source = from([1, 2, 3, 4, 5]);
-
-const numbers = of(17,18);
-
-
-const zipped = source.pipe(combineLatestWith(numbers)); // foo 15,45...
-
-console.log();
-
-
-const switched = source.pipe(switchMap(value => of(value*3,value*4)));
-
-console.log(switched);
-
-zipped.subscribe({
-    next(x) {
-       console.log(x);
-    }
-});
-
 
 /*const numbers = of(1, 2, 3).pipe(
     tap(value => {
