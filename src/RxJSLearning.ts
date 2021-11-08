@@ -22,6 +22,13 @@ const filteredObservable = foo.pipe(filter(ev => {
 
 filteredObservable.subscribe(console.log);
 
+
+const source = of(1, 2, 3, 4, 5);
+
+const switched = source.pipe(switchMap(x => of(x+2, x+3)));
+
+switched.subscribe( x => console.log(`New value ${x}`));
+
 /*const numbers = of(1, 2, 3).pipe(
     tap(value => {
         console.log(++value)
@@ -30,8 +37,6 @@ filteredObservable.subscribe(console.log);
 );
 
 numbers.subscribe(console.log);
-
-const source = of(1, 2, 3, 4, 5)
 
 
 source.pipe(
